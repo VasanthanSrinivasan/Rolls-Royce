@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Timeless Design – Rolls-Royce Experience</title>
+<style>
+  :root {
+    --gold: #c9a86a;
+    --dark: #0b0b0c;
+    --curve: cubic-bezier(.2, .7, .2, 1);
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--dark);
+    color: #fff;
+  }
+
+  header {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+                url('https://mobot-space.ams3.cdn.digitaloceanspaces.com/blog_images_webp/Rolls_Royce_20240102_220957_0.webp') center/cover no-repeat;
+    color: white;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  header h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 14px rgba(0,0,0,0.7);
+  }
+
+  header p {
+    max-width: 700px;
+    margin: 14px auto 0;
+    font-size: 1.2rem;
+    color: #ddd;
+    line-height: 1.6;
+  }
+
+  main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+
+  .intro {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #ccc;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .design-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .design-card {
+    background: #111;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+    transition: transform 0.4s var(--curve), box-shadow 0.4s var(--curve);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .design-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s var(--curve);
+  }
+
+  .design-card h3 {
+    margin: 16px;
+    font-size: 1.3rem;
+    color: var(--gold);
+  }
+
+  .design-card p {
+    margin: 0 16px 20px;
+    font-size: 1rem;
+    color: #ccc;
+    flex-grow: 1;
+  }
+
+  .design-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 18px 36px rgba(0,0,0,0.6);
+  }
+
+  .design-card:hover img {
+    transform: scale(1.08);
+  }
+/* ---------- FOOTER ---------- */
+.footer {
+    background: linear-gradient(180deg, #000, #111);
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #c0a062; /* Luxury gold tone */
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer-column a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.footer-column a:hover {
+    border-color: #c0a062;
+}
+
+.footer-column strong {
+    color: #fff;
+    font-weight: 600;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Timeless Design</h1>
+  <p>
+    A Rolls-Royce is not just a car — it’s an everlasting masterpiece.  
+    Our designs blend heritage with modern craftsmanship, creating icons that transcend generations.
+  </p>
+</header>
+
+<main>
+  <p class="intro">
+    Every curve, every detail, every stitch is created to endure the test of time.  
+    Explore the design philosophy that ensures every Rolls-Royce remains a statement of elegance forever.
+  </p>
+
+  <div class="design-grid">
+    <div class="design-card">
+      <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?q=80&w=1600&auto=format&fit=crop" alt="Classic Lines">
+      <h3>Classic Lines</h3>
+      <p>Signature silhouettes and iconic proportions that never age, rooted in a century of excellence.</p>
+    </div>
+
+    <div class="design-card">
+      <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=1600&auto=format&fit=crop" alt="Modern Luxury">
+      <h3>Modern Luxury</h3>
+      <p>Innovative design meets traditional craftsmanship, offering timeless elegance with modern convenience.</p>
+    </div>
+
+    <div class="design-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR86gb956w8ydv5oC-jyb47pNjmFI6M0ofhhzcGtTStpF2O1vYkjo9y_j74vayD9Jz8Qs&usqp=CAU" alt="Bespoke Details">
+      <h3>Bespoke Details</h3>
+      <p>Every vehicle is a personal statement, tailored to its owner with unmatched precision and artistry.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>NAMAKKAL</h3>
+          <p><strong>Sales &amp; Service</strong></p>
+          <p>NH 7, Salem Road,<br>
+            Survey No: 82/9A2 - 12A,<br>
+            Mudhalaipatty Village, Namakkal, Tamil Nadu,<br>
+            India - 637 001.<br>
+            Tel.: +91 9344842060<br>
+            Email: <a href="mailto:inforollsroyce-elegance.in">rollsroycenkl@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>SALEM</h3>
+          <p><strong>Sales &amp; Service</strong></p>
+          <p>Door No. 1/582-2, Seelanayakampatti Bypass,<br>
+            Salem Post, Salem Taluk,<br>
+            Salem, Tamil Nadu,<br>
+            India - 636 309.<br>
+            Tel.: +91 6383806004<br>
+            Email: <a href="mailto:inforollsroyce-elegance.in">rollsroycesalem@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>COIMBATORE</h3>
+          <p><strong>Sales &amp; Service</strong></p>
+          <p>Ground Floor, 377,<br>
+            Nearby New Busstand, Gandhipuram,<br>
+            Coimbatore, Tamil Nadu,<br>
+            India - 600018.<br>
+            Tel.: +91 6384681305<br>
+            Email: <a href="inforollsroyce-elegance.in">rollsroycekovai@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>CHENNAI</h3>
+          <p><strong>Sales &amp; Service</strong></p>
+          <p>20, GST Road,<br>
+            New Busstand,<br>
+            Meenambakkam,<br>
+            Chennai, Tamil Nadu,<br>
+            India - 600027.<br>
+            Tel.: +91 9176856666<br>
+            Email: <a href="mailto:inforollsroyce-elegance.in">rollsroycechennai@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>

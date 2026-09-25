@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rolls-Royce | Luxury ReImagined</title>
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="inner container">
+      <a class="brand" href="index.html" aria-label="Rolls Royce">Rolls <span>Royce</span></a>
+
+      <!-- theme toggle (checkbox hack) -->
+      <label class="theme-toggle" aria-hidden="true" title="Toggle theme">
+        <input id="theme" type="checkbox" />
+        <span class="toggle-visual" aria-hidden="true"></span>
+      </label>
+
+      <!-- burger (mobile) -->
+      <input id="menu" class="menu-check" type="checkbox" />
+      <label for="menu" class="burger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#luxury">Luxury</a></li>
+          <li><a href="#models">Models</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="login.html" class="pill">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO: cinematic video banner -->
+  <section id="home" class="hero">
+    <video class="hero-video" autoplay muted loop playsinline
+      poster="https://images.unsplash.com/photo-1615529162923-0c1e0608d64c?q=80&w=1600&auto=format&fit=crop">
+      <source src="videos/Rolls-Royce _ 100 Years of Phantom.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner container">
+      <h1 class="hero-title">Experience the Power of <span class="accent">Elegance</span></h1>
+      <p class="hero-sub">Where timeless design meets modern engineering — crafted for the discerning few.</p>
+
+      <div class="hero-ctas">
+        <a class="btn primary" href="#models">Explore Models</a>
+        <a class="btn ghost" href="#luxury">Our Signature</a>
+      </div>
+
+      <div class="hero-credits">Exclusive • Bespoke • Limited</div>
+    </div>
+
+    <a class="scroll-down" href="#collage" aria-hidden="true"><span></span></a>
+  </section>
+
+  <main id="main">
+
+    <!-- COLLAGE -->
+    <section id="collage" class="collage container">
+      <h2 class="sr-title">A Collage of Craftsmanship</h2>
+
+      <section class="collage-grid">
+        <a href="bespoke.html" class="tile-link">
+          <figure class="tile">
+            <img
+              src="https://hips.hearstapps.com/hmg-prod/images/2025-rolls-royce-ghost-ii-29-67053b7543813.jpg?resize=1200:*"
+              alt="Bespoke details">
+            <figcaption>Bespoke details</figcaption>
+          </figure>
+        </a>
+
+        <a href="handcrafted.html" class="tile-link">
+          <figure class="tile">
+            <img
+              src="https://www.rolls-roycemotorcars.com/content/dam/rrmc/marketUK/rollsroycemotorcars_com/phantom-100/page-components/phantom-ext/phantom-ext-in-detail/D-IMG-01-PEXT100-DETAIL.jpg"
+              alt="Handcrafted interiors">
+            <figcaption>Handcrafted interiors</figcaption>
+          </figure>
+        </a>
+
+        <a href="performance.html" class="tile-link">
+          <figure class="tile">
+            <img
+              src="https://s1.cdn.autoevolution.com/images/news/rolls-royce-ghoul-rendering-blurs-all-lines-between-high-end-luxury-and-performance-204885_1.jpg"
+              alt="Performance">
+            <figcaption>Performance</figcaption>
+          </figure>
+        </a>
+
+        <a href="timeless.html" class="tile-link">
+          <figure class="tile">
+            <img
+              src="https://mobot-space.ams3.cdn.digitaloceanspaces.com/blog_images_webp/Rolls_Royce_20240102_220957_0.webp"
+              alt="Timeless design">
+            <figcaption>Timeless design</figcaption>
+          </figure>
+        </a>
+      </section>
+    </section>
+
+    <!-- LUXURY: glass + parallax + glow -->
+    <section id="luxury" class="luxury container">
+      <header class="luxury-head">
+        <h2>Uncompromised Luxury</h2>
+        <p>Materials, workmanship and detail — a singular experience.</p>
+      </header>
+
+      <div class="luxury-grid">
+        <article class="lux-card"
+          style="--img:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxMTWqGGf4oUz2o-IjZRKmnvbiuAp0-cPN9g&s')">
+          <div class="lux-overlay">
+            <h3>Exquisite Interiors</h3>
+            <p>Hand-stitched leather, polished veneers and crafted knobs — every detail curated.</p>
+          </div>
+        </article>
+
+        <article class="lux-card" style="--img:url('https://www.autobest.co.in/uploads/blog/661763610313.jpeg')">
+          <div class="lux-overlay">
+            <h3>Silence & Performance</h3>
+            <p>Silent refinement meets effortless power — the ride is sublime.</p>
+          </div>
+        </article>
+
+        <article class="lux-card"
+          style="--img:url('https://i.ytimg.com/vi/bZXsDkiV7S0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCbJa9TA6ec3oxqhM4yxYUl_cZztg')">
+          <div class="lux-overlay">
+            <h3>Signature Lighting</h3>
+            <p>Bespoke ambient lightscapes crafted for presence and mood.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODELS -->
+    <section id="models" class="models container">
+      <h2>Our Exquisite Models</h2>
+
+      <div class="models-grid">
+        <div class="model">
+          <figure>
+            <img src="https://www.topgear.com/sites/default/files/2021/11/DSC01735.jpg" alt="Ghost">
+          </figure>
+          <div class="model-body">
+            <h3>Ghost</h3>
+            <p>Effortless elegance with modern minimalism.</p>
+          </div>
+        </div>
+
+        <div class="model">
+          <figure>
+            <img
+              src="https://www.novitecgroup.com/assets/images/news/rolls-royce/Phantom-II/phantomheader__FocusFillWyIwLjAwIiwiMC4wMCIsMTkyMCw2MDBd.jpg"
+              alt="Phantom">
+          </figure>
+          <div class="model-body">
+            <h3>Phantom</h3>
+            <p>The ultimate expression of bespoke craftsmanship.</p>
+          </div>
+        </div>
+
+        <div class="model">
+          <figure>
+            <img
+              src="https://mediapool.bmwgroup.com/cache/P9/202210/P90483589/P90483589-spectre-unveiled-the-first-fully-electric-rolls-royce-front-3-4-2250px.jpg"
+              alt="Spectre">
+          </figure>
+          <div class="model-body">
+            <h3>Spectre</h3>
+            <p>All-electric refinement — reimagined on a quiet scale.</p>
+          </div>
+        </div>
+
+        <div class="model">
+          <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Rolls-Royce_Sweptail_front.jpg"
+              alt="Sweptail">
+          </figure>
+          <div class="model-body">
+            <h3>Sweptail</h3>
+            <p>Bespoke coachwork for the discerning collector.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT: split-screen parallax -->
+    <section id="about" class="about">
+      <div class="about-split container">
+        <div class="about-media" aria-hidden="true"></div>
+        <div class="about-text">
+          <h2>About Rolls-Royce</h2>
+          <p>Since the beginning, Rolls-Royce has combined artistry and engineering to create machines of unrivalled
+            presence.</p>
+          <ul>
+            <li>Craftsmanship that lasts generations</li>
+            <li>Personalization through Bespoke programs</li>
+            <li>Commitment to perfection in every stage</li>
+          </ul>
+          <a class="btn primary" href="contact.html">Book a Viewing</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS: CSS flip cards -->
+    <section id="testimonials" class="testimonials container">
+      <h2>What Our Clients Say</h2>
+
+      <div class="test-grid">
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <blockquote>“Owning a Ghost felt like owning a piece of music — subtle, perfect, alive.”</blockquote>
+              <cite>— Aadhavan R.</cite>
+            </div>
+            <div class="flip-back">
+              <p>“From custom wood to the starlight headliner, every touch was personal and timeless.”</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <blockquote>“The Phantom is poetry in motion.”</blockquote>
+              <cite>— Priya M.</cite>
+            </div>
+            <div class="flip-back">
+              <p>“Service and delivery were effortless; craftsmanship exceeded expectation.”</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <blockquote>“Cullinan made every road feel private.”</blockquote>
+              <cite>— Karan S.</cite>
+            </div>
+            <div class="flip-back">
+              <p>“Utility without compromise—comfort and presence in one package.”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT: glassmorphism + gmap + subscribe -->
+    <section id="contact" class="contact container">
+      <h2>Get in Touch</h2>
+
+      <div class="contact-grid">
+        <form class="contact-form card" action="contact.html" method="post" aria-label="Contact form">
+          <div class="form-row">
+            <label><span>Name</span><input type="text" name="name" required></label>
+            <label><span>Email</span><input type="email" name="email" required></label>
+          </div>
+
+          <label><span>Phone</span><input type="tel" name="phone"></label>
+          <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send Message</button>
+            <button class="btn ghost" type="reset">Reset</button>
+          </div>
+
+          <div class="muted small">This is a static demo form — to receive messages you'd connect to a backend or
+            service.</div>
+        </form>
+
+        <aside class="map-card card">
+          <h3>Showroom</h3>
+          <p>Rolls-Royce Motor Cars<br>123 Luxury Ave, London</p>
+          <p class="muted">Mon–Fri: 9:00–18:00 · Sat: 10:00–16:00</p>
+
+          <div class="map-container">
+            <!-- Replace the src with your own place / place_id if desired -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1985.1234567890123!2d-0.1425006843164!3d51.50735067963516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3333333333%3A0xabcdef1234567890!2sRolls-Royce%20Motor%20Cars%20Showroom!5e0!3m2!1sen!2sin!4v1690000000000"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-hidden="false"></iframe>
+          </div>
+
+          <form class="subscribe-form" action="#" method="post" aria-label="Subscribe">
+            <label for="subscribe">Subscribe</label>
+            <div class="subscribe-row">
+              <input id="subscribe" name="subscribe" type="email" placeholder="you@example.com" required>
+              <button class="btn primary" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <section class="hero" id="dealer">
+      <div>
+        <h1>Find a Dealer</h1>
+        <p>Locate your nearest authorised showroom and experience luxury first-hand.</p>
+        <div class="dealer-card">
+          <form class="dealer-form" id="dealerForm">
+            <input type="text" id="location" placeholder="Enter city or pincode" required>
+            <button class="btn" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <div class="scroller">
+          <div class="car-card" style="--hue:0;">
+            <div class="car-name">Ghost - Silver</div>
+            <img
+              src="https://res.cloudinary.com/motortrak/t_base_vehicle_transformation/ims2/vehicle-media/undefined/kcoc6xxjq3z2z7seuhfx"
+              class="car-img" style="filter:hue-rotate(0deg)">
+          </div>
+          <div class="car-card" style="--hue:0;">
+            <div class="car-name">Ghost - Gold</div>
+            <img src="https://images.pexels.com/photos/5046370/pexels-photo-5046370.jpeg" class="car-img"
+              style="filter:hue-rotate(0deg)">
+          </div>
+          <div class="car-card" style="--hue:0;">
+            <div class="car-name">Ghost - Emerald</div>
+            <img src="https://vimg.remora.inc/26465/sca13gz03su230545-2025-rolls-royce-ghost-dark-emerald-1.jpg"
+              class="car-img" style="filter:hue-rotate(0deg)">
+          </div>
+          <div class="car-card" style="--hue:0;">
+            <div class="car-name">Ghost - Blue</div>
+            <img
+              src="https://bluesky.cdn.imgeng.in/cogstock-images/7983b8cb-d6a0-4be3-81e2-82b208cb8aff.jpg?migeng=/w_1200/cmpr_99/"
+              class="car-img" style="filter:hue-rotate(0deg)">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>NAMAKKAL</h3>
+          <p><strong>Sales &amp; Service</strong></p>
+          <p>NH 7, Salem Road,<br>
+            Survey No: 82/9A2 - 12A,<br>
+            Mudhalaipatty Village, Namakkal, Tamil Nadu,<br>
+            India - 637 001.<br>
+            Tel.: +91 9344842060<br>
+            Email: <a href="mailto:inforollsroyce-elegance.in">rollsroycenkl@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>SALEM</h3>
+          <p><strong>Sales &amp; Service</strong></p>
+          <p>Door No. 1/582-2, Seelanayakampatti Bypass,<br>
+            Salem Post, Salem Taluk,<br>
+            Salem, Tamil Nadu,<br>
+            India - 636 309.<br>
+            Tel.: +91 6383806004<br>
+            Email: <a href="mailto:inforollsroyce-elegance.in">rollsroycesalem@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>COIMBATORE</h3>
+          <p><strong>Sales &amp; Service</strong></p>
+          <p>Ground Floor, 377,<br>
+            Nearby New Busstand, Gandhipuram,<br>
+            Coimbatore, Tamil Nadu,<br>
+            India - 600018.<br>
+            Tel.: +91 6384681305<br>
+            Email: <a href="inforollsroyce-elegance.in">rollsroycekovai@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>CHENNAI</h3>
+          <p><strong>Sales &amp; Service</strong></p>
+          <p>20, GST Road,<br>
+            New Busstand,<br>
+            Meenambakkam,<br>
+            Chennai, Tamil Nadu,<br>
+            India - 600027.<br>
+            Tel.: +91 9176856666<br>
+            Email: <a href="mailto:inforollsroyce-elegance.in">rollsroycechennai@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>

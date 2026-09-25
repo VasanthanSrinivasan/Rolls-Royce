@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Performance – Rolls-Royce Experience</title>
+<style>
+  :root {
+    --gold: #c9a86a;
+    --dark: #0b0b0c;
+    --curve: cubic-bezier(.2, .7, .2, 1);
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--dark);
+    color: #fff;
+  }
+
+  header {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to right, rgba(0,0,0,.8), rgba(0,0,0,.6)), url('https://s1.cdn.autoevolution.com/images/news/rolls-royce-ghoul-rendering-blurs-all-lines-between-high-end-luxury-and-performance-204885_1.jpg') center/cover no-repeat;
+    color: white;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  header h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 14px rgba(0,0,0,0.7);
+  }
+
+  main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+  }
+
+  .intro {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #ccc;
+    margin-bottom: 40px;
+  }
+
+  .perf-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .perf-card {
+    background: #111;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+    transition: transform 0.4s var(--curve), box-shadow 0.4s var(--curve);
+  }
+
+  .perf-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s var(--curve);
+  }
+
+  .perf-card h3 {
+    margin: 16px;
+    font-size: 1.3rem;
+    color: var(--gold);
+  }
+
+  .perf-card p {
+    margin: 0 16px 20px;
+    font-size: 1rem;
+    color: #ccc;
+  }
+
+  .perf-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 18px 36px rgba(0,0,0,0.6);
+  }
+
+  .perf-card:hover img {
+    transform: scale(1.08);
+  }
+
+  /* ---------- FOOTER ---------- */
+.footer {
+    background: linear-gradient(180deg, #000, #111);
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #c0a062; /* Luxury gold tone */
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer-column a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.footer-column a:hover {
+    border-color: #c0a062;
+}
+
+.footer-column strong {
+    color: #fff;
+    font-weight: 600;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Performance Excellence</h1>
+</header>
+
+<main>
+  <p class="intro">
+    Experience the unyielding power and refinement of Rolls-Royce performance.
+    Every engine is hand-crafted, delivering seamless acceleration, whisper-quiet rides,
+    and an effortless sense of command.
+  </p>
+
+  <div class="perf-grid">
+    <div class="perf-card">
+      <img src="https://external-preview.redd.it/hra53euwJgNrLaPLLRnyBr-iVDAE3reIqcsebDlaIFM.jpg?width=1080&crop=smart&auto=webp&s=8358b5c66097047768336a9f0b6e94add33af867" alt="V12 Engine">
+      <h3>V12 Engine Mastery</h3>
+      <p>Our iconic V12 delivers immense torque with unrivaled smoothness, ensuring every journey is effortless.</p>
+    </div>
+
+    <div class="perf-card">
+      <img src="https://i.ytimg.com/vi/kAD4lIJSOOU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD18o6IoAA4LOS38PThmuHi3Krc9Q" alt="Adaptive Suspension">
+      <h3>Adaptive Suspension</h3>
+      <p>Glide over any surface with precision-engineered suspension that anticipates every road contour.</p>
+    </div>
+
+    <div class="perf-card">
+      <img src="https://images.hindustantimes.com/auto/img/2021/05/29/1600x900/Rolls_Roye_Wraith_1594181845694_1594181857307_1622276715896.jpg" alt="Silent Powertrain">
+      <h3>Silent Powertrain</h3>
+      <p>Feel the power, not the noise — our advanced insulation technology keeps the cabin tranquil.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>NAMAKKAL</h3>
+          <p><strong>Sales &amp; Service</strong></p>
+          <p>NH 7, Salem Road,<br>
+            Survey No: 82/9A2 - 12A,<br>
+            Mudhalaipatty Village, Namakkal, Tamil Nadu,<br>
+            India - 637 001.<br>
+            Tel.: +91 9344842060<br>
+            Email: <a href="mailto:inforollsroyce-elegance.in">rollsroycenkl@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>SALEM</h3>
+          <p><strong>Sales &amp; Service</strong></p>
+          <p>Door No. 1/582-2, Seelanayakampatti Bypass,<br>
+            Salem Post, Salem Taluk,<br>
+            Salem, Tamil Nadu,<br>
+            India - 636 309.<br>
+            Tel.: +91 6383806004<br>
+            Email: <a href="mailto:inforollsroyce-elegance.in">rollsroycesalem@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>COIMBATORE</h3>
+          <p><strong>Sales &amp; Service</strong></p>
+          <p>Ground Floor, 377,<br>
+            Nearby New Busstand, Gandhipuram,<br>
+            Coimbatore, Tamil Nadu,<br>
+            India - 600018.<br>
+            Tel.: +91 6384681305<br>
+            Email: <a href="inforollsroyce-elegance.in">rollsroycekovai@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>CHENNAI</h3>
+          <p><strong>Sales &amp; Service</strong></p>
+          <p>20, GST Road,<br>
+            New Busstand,<br>
+            Meenambakkam,<br>
+            Chennai, Tamil Nadu,<br>
+            India - 600027.<br>
+            Tel.: +91 9176856666<br>
+            Email: <a href="mailto:inforollsroyce-elegance.in">rollsroycechennai@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

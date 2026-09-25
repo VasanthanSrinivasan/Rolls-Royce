@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rolls‑Royce | Handcrafted Bespoke</title>
+    <meta name="description"
+        content="An attractive, trendy, handcrafted Rolls‑Royce bespoke page with premium animations, galleries, and responsive design." />
+
+    <style>
+        :root {
+            --bg: #0b0b0b;
+            --bg-2: #111316;
+            --card: #121418dd;
+            --text: #f3f3f3;
+            --muted: #a7a7a7;
+            --gold: #cda434;
+            --gold-2: #ffd86b;
+            --glass: rgba(255, 255, 255, 0.06);
+            --radius: 22px;
+            --shadow: 0 10px 35px rgba(0, 0, 0, .45);
+            --ring: 0 0 0 2px rgba(205, 164, 52, .25), 0 0 26px rgba(205, 164, 52, .25);
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            background: radial-gradient(1200px 800px at 80% -10%, #1a1a1a 0%, var(--bg) 60%) fixed;
+            color: var(--text);
+            font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit
+        }
+
+        /* Header */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+            background: linear-gradient(180deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .15));
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .nav .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 14px 22px;
+            max-width: 1200px;
+            margin: auto
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase
+        }
+
+        .brand span {
+            color: var(--gold)
+        }
+
+        .nav a.link {
+            opacity: .85;
+            text-decoration: none;
+            margin: 0 10px;
+            position: relative
+        }
+
+        .nav a.link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            height: 2px;
+            width: 0;
+            background: linear-gradient(90deg, var(--gold), var(--gold-2));
+            transition: .35s
+        }
+
+        .nav a.link:hover {
+            opacity: 1
+        }
+
+        .nav a.link:hover::after {
+            width: 100%
+        }
+
+        .cta-btn {
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-2));
+            color: #000;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: var(--ring)
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 82vh;
+            display: grid;
+            place-items: center;
+            overflow: hidden
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url('https://images.pexels.com/photos/5046370/pexels-photo-5046370.jpeg') center/cover no-repeat;
+            filter: contrast(1.05) saturate(1.15) brightness(.9)
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(1000px 600px at 20% 10%, rgba(0, 0, 0, .25), rgba(0, 0, 0, .85))
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            width: min(1100px, 92%);
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 26px;
+            align-items: center
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 12px;
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: 999px;
+            font-size: .8rem;
+            color: var(--muted);
+            backdrop-filter: blur(6px)
+        }
+
+        .title {
+            font-size: clamp(2rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin: .3rem 0 1rem
+        }
+
+        .title em {
+            color: var(--gold);
+            font-style: normal
+        }
+
+        .tile-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .tile-link:hover img {
+            transform: scale(1.03);
+            transition: transform 0.3s ease;
+        }
+
+
+        .subtitle {
+            color: #d9d9d9;
+            margin-bottom: 18px
+        }
+
+        .hero-cards {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px
+        }
+
+        .hero-card {
+            background: var(--glass);
+            border: 1px solid rgba(255, 255, 255, .08);
+            padding: 16px;
+            border-radius: 16px;
+            box-shadow: var(--shadow)
+        }
+
+        .hero-card b {
+            color: var(--gold)
+        }
+
+        .hero-media {
+            position: relative
+        }
+
+        .lux-card {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            aspect-ratio: 16/10;
+        }
+
+        .lux-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.06);
+            transition: transform .6s ease
+        }
+
+        .lux-card:hover img {
+            transform: scale(1.12)
+        }
+
+        .badge {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: rgba(0, 0, 0, .55);
+            border: 1px solid rgba(255, 255, 255, .12);
+            padding: 8px 12px;
+            border-radius: 999px;
+            backdrop-filter: blur(6px);
+            font-size: .85rem
+        }
+
+        /* Section heading */
+        .section {
+            padding: 64px 0
+        }
+
+        .wrap {
+            width: min(1200px, 92%);
+            margin-inline: auto
+        }
+
+        .section h2 {
+            font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+            margin: 0 0 18px
+        }
+
+        .section .lead {
+            color: var(--muted);
+            max-width: 760px
+        }
+
+        /* Specs glass grid */
+        .specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 22px
+        }
+
+        .spec {
+            background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 18px;
+            padding: 18px;
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+            box-shadow: var(--shadow);
+        }
+
+        .spec::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .08), transparent);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude
+        }
+
+        .spec h3 {
+            margin: 0 0 6px;
+            font-size: 1.05rem;
+            color: #eaeaea
+        }
+
+        .spec p {
+            margin: 0;
+            color: var(--muted)
+        }
+
+        /* Colorway selector */
+        .colors {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 14px 0 0
+        }
+
+        .swatch {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, .3);
+            cursor: pointer;
+            outline: none;
+            transition: transform .2s
+        }
+
+        .swatch:focus-visible {
+            box-shadow: var(--ring)
+        }
+
+        .swatch:hover {
+            transform: translateY(-2px)
+        }
+
+        /* Gallery scroller */
+        .gallery {
+            margin-top: 22px;
+            display: flex;
+            gap: 16px;
+            overflow: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch
+        }
+
+        .card {
+            flex: 0 0 300px;
+            scroll-snap-align: start;
+            border-radius: 18px;
+            overflow: hidden;
+            background: #0f1114;
+            border: 1px solid rgba(255, 255, 255, .08);
+            box-shadow: var(--shadow);
+            transition: transform .35s
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover
+        }
+
+        .card .meta {
+            padding: 12px 14px;
+            color: #ddd;
+            font-size: .95rem
+        }
+
+        .card:hover {
+            transform: translateY(-6px)
+        }
+
+        /* Marquee */
+        .marquee {
+            display: flex;
+            overflow: hidden;
+            border-block: 1px solid rgba(255, 255, 255, .08);
+            background: rgba(255, 255, 255, .02)
+        }
+
+        .marquee .track {
+            display: flex;
+            gap: 38px;
+            padding: 12px 0;
+            animation: scroll 18s linear infinite
+        }
+
+        @keyframes scroll {
+            to {
+                transform: translateX(-50%)
+            }
+        }
+
+        /* CTA */
+        .cta {
+            margin: 60px 0 40px;
+            display: grid;
+            place-items: center;
+            text-align: center
+        }
+
+        .cta .panel {
+            background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .02));
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 22px;
+            padding: 26px;
+            box-shadow: var(--shadow)
+        }
+
+        .cta .btn {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 12px 22px;
+            border-radius: 999px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--gold), var(--gold-2));
+            box-shadow: var(--ring)
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(180deg, #000, #111);
+            color: #fff;
+            padding: 40px 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #c0a062;
+            /* Luxury gold tone */
+        }
+
+        .footer-column p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .footer-column a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            border-color: #c0a062;
+        }
+
+        .footer-column strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 16px
+            }
+
+            .card {
+                flex-basis: 260px
+            }
+        }
+
+        @media (min-width: 1024px) and (max-width: 1440px) {
+            .hero-inner {
+                grid-template-columns: 1.1fr .9fr
+            }
+
+            .card img {
+                height: 220px
+            }
+        }
+
+        @media (min-width:1600px) {
+            .hero {
+                min-height: 88vh
+            }
+
+            .card {
+                flex-basis: 360px
+            }
+
+            .card img {
+                height: 260px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav class="nav" aria-label="Primary">
+        <div class="wrap">
+            <div class="brand">Rolls <span>Royce</span></div>
+            <div>
+                <a class="link" href="#gallery">Gallery</a>
+                <a class="link" href="#specs">Specs</a>
+                <a class="cta-btn" href="#test-drive">Test Drive</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="bespoke" role="banner">
+        <div class="hero-inner">
+            <div>
+                <span class="tag">Handcrafted • Limited Commission</span>
+                <h1 class="title">Bespoke <em>Ghost</em> — Excellence Beyond Luxury</h1>
+                <p class="subtitle">Individually commissioned. Painstakingly finished. Every stitch, veneer and detail
+                    shaped by master artisans for an experience that feels like it was always meant for you.</p>
+                <div class="hero-cards">
+                    <div class="hero-card"><b>6.75L V12</b><br>Silent power, effortless acceleration.</div>
+                    <div class="hero-card"><b>Starlight Headliner</b><br>Hand‑placed constellations above.</div>
+                    <div class="hero-card"><b>Coach Doors</b><br>Gracious entry with umbrella monogram.</div>
+                    <div class="hero-card"><b>Gallery Dashboard</b><br>Curated art behind glass fascia.</div>
+                </div>
+            </div>
+            <div class="hero-media" aria-hidden="true">
+                <figure class="lux-card">
+                    <img src="https://vimg.remora.inc/26465/sca13gz03su230545-2025-rolls-royce-ghost-dark-emerald-1.jpg"
+                        alt="Rolls‑Royce Ghost Bespoke in Dark Emerald">
+                    <figcaption class="badge">Dark Emerald Commission</figcaption>
+                </figure>
+            </div>
+        </div>
+    </header>
+
+    <!-- SPECS + COLORWAYS -->
+    <section class="section wrap" id="specs" aria-label="Specifications">
+        <h2>Handcrafted Specifications</h2>
+        <p class="lead">Select your signature colorway and explore the quiet force beneath the Spirit of Ecstasy.</p>
+
+        <div class="colors" aria-label="Colorway selector">
+            <button class="swatch" style="background:#C0C0C0"
+                data-img="https://res.cloudinary.com/motortrak/t_base_vehicle_transformation/ims2/vehicle-media/undefined/kcoc6xxjq3z2z7seuhfx"
+                aria-label="Silver"></button>
+            <button class="swatch" style="background:#caa23a"
+                data-img="https://images.pexels.com/photos/5046370/pexels-photo-5046370.jpeg"
+                aria-label="Gold"></button>
+            <button class="swatch" style="background:#0d5230"
+                data-img="https://vimg.remora.inc/26465/sca13gz03su230545-2025-rolls-royce-ghost-dark-emerald-1.jpg"
+                aria-label="Emerald"></button>
+            <button class="swatch" style="background:#244a9a"
+                data-img="https://bluesky.cdn.imgeng.in/cogstock-images/7983b8cb-d6a0-4be3-81e2-82b208cb8aff.jpg?migeng=/w_1200/cmpr_99/"
+                aria-label="Royal Blue"></button>
+        </div>
+
+        <div class="specs" style="margin-top:20px">
+            <article class="spec">
+                <h3>Powertrain</h3>
+                <p>6.75L V12 twin‑turbo • 420 kW • 0‑100 km/h in 4.8s</p>
+            </article>
+            <article class="spec">
+                <h3>Ride</h3>
+                <p>Planar Suspension • Flagbearer Cameras • Magic Carpet Ride</p>
+            </article>
+            <article class="spec">
+                <h3>Interior</h3>
+                <p>Open‑pore veneer • Hand‑stitched leather • Bespoke embroidery</p>
+            </article>
+            <article class="spec">
+                <h3>Acoustics</h3>
+                <p>300+ lbs of sound insulation • Whisper‑quiet cabin</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section wrap" id="gallery" aria-label="Gallery">
+        <h2>Luxury in Every Angle</h2>
+        <p class="lead">Swipe through commissions and finishes. On larger screens, hover to elevate each card.</p>
+        <div class="gallery">
+            <article class="card" tabindex="0">
+                <img src="https://images.pexels.com/photos/5046370/pexels-photo-5046370.jpeg"
+                    alt="Ghost in gold, front 3/4 view">
+                <div class="meta">Ghost • Aurum Satin</div>
+            </article>
+            <article class="card" tabindex="0">
+                <img src="https://vimg.remora.inc/26465/sca13gz03su230545-2025-rolls-royce-ghost-dark-emerald-1.jpg"
+                    alt="Ghost Dark Emerald profile">
+                <div class="meta">Ghost • Dark Emerald</div>
+            </article>
+            <article class="card" tabindex="0">
+                <img src="https://bluesky.cdn.imgeng.in/cogstock-images/7983b8cb-d6a0-4be3-81e2-82b208cb8aff.jpg?migeng=/w_1200/cmpr_99/"
+                    alt="Ghost in Royal Blue night shot">
+                <div class="meta">Ghost • Royal Blue</div>
+            </article>
+            <article class="card" tabindex="0">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/2025-rolls-royce-ghost-ii-29-67053b7543813.jpg?resize=1200:*"
+                    alt="Ghost II bespoke details close‑up">
+                <div class="meta">Ghost II • Bespoke Details</div>
+            </article>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+        <div class="track">
+            <span>Hand‑polished Veneers</span>
+            <span>Coachline by Hand</span>
+            <span>Starlight Headliner</span>
+            <span>Gallery Dashboard</span>
+            <span>Whisper‑Quiet Cabin</span>
+            <span>Planar Suspension</span>
+            <span>Immersive Seating</span>
+            <span>Suicide Doors</span>
+            <span>Spirit of Ecstasy</span>
+            <span>Hand‑polished Veneers</span>
+            <span>Coachline by Hand</span>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="wrap cta" id="test-drive">
+        <div class="panel">
+            <h2>Drive the Dream</h2>
+            <p class="lead">Book a private viewing with our Bespoke curator. Choose your palette, materials and finish —
+                the rest is art.</p>
+            <a class="btn" href="contact.html">Book Now</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>NAMAKKAL</h3>
+                    <p><strong>Sales &amp; Service</strong></p>
+                    <p>NH 7, Salem Road,<br>
+                        Survey No: 82/9A2 - 12A,<br>
+                        Mudhalaipatty Village, Namakkal, Tamil Nadu,<br>
+                        India - 637 001.<br>
+                        Tel.: +91 9344842060<br>
+                        Email: <a href="mailto:inforollsroyce-elegance.in">rollsroycenkl@gmail.com</a>
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>SALEM</h3>
+                    <p><strong>Sales &amp; Service</strong></p>
+                    <p>Door No. 1/582-2, Seelanayakampatti Bypass,<br>
+                        Salem Post, Salem Taluk,<br>
+                        Salem, Tamil Nadu,<br>
+                        India - 636 309.<br>
+                        Tel.: +91 6383806004<br>
+                        Email: <a href="mailto:inforollsroyce-elegance.in">rollsroycesalem@gmail.com</a>
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>COIMBATORE</h3>
+                    <p><strong>Sales &amp; Service</strong></p>
+                    <p>Ground Floor, 377,<br>
+                        Nearby New Busstand, Gandhipuram,<br>
+                        Coimbatore, Tamil Nadu,<br>
+                        India - 600018.<br>
+                        Tel.: +91 6384681305<br>
+                        Email: <a href="inforollsroyce-elegance.in">rollsroycekovai@gmail.com</a>
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>CHENNAI</h3>
+                    <p><strong>Sales &amp; Service</strong></p>
+                    <p>20, GST Road,<br>
+                        New Busstand,<br>
+                        Meenambakkam,<br>
+                        Chennai, Tamil Nadu,<br>
+                        India - 600027.<br>
+                        Tel.: +91 9176856666<br>
+                        Email: <a href="mailto:inforollsroyce-elegance.in">rollsroycechennai@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </footer>
+
+</body>
+
+</html>

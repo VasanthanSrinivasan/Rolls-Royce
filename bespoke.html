@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rolls-Royce Bespoke</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+    line-height: 1.6;
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    background: url('https://images.pexels.com/photos/5046370/pexels-photo-5046370.jpeg') no-repeat center/cover;
+    height: 90vh;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-overlay h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #cda434;
+  }
+
+  .hero-overlay p {
+    font-size: 1.2rem;
+  }
+
+  .tile-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .tile-link:hover img {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+  }
+
+  /* Specs */
+  .specs {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .specs h2 {
+    font-size: 2rem;
+    color: #cda434;
+    margin-bottom: 40px;
+  }
+
+  .spec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  .spec-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+
+  .spec-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .spec-card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #cda434;
+  }
+
+  /* Gallery */
+  .gallery-section {
+    padding: 60px 20px;
+  }
+
+  .gallery-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #cda434;
+  }
+
+  .gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .gallery img {
+    width: 350px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  /* CTA */
+  .cta {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+  }
+
+  .cta h2 {
+    font-size: 2rem;
+    color: #cda434;
+    margin-bottom: 10px;
+  }
+
+  .cta p {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #cda434;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s ease;
+  }
+
+  .btn:hover {
+    background: gold;
+  }
+
+  /* Footer */
+  .footer {
+    background: linear-gradient(180deg, #000, #111);
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: auto;
+  }
+
+  .footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #c0a062;
+    /* Luxury gold tone */
+  }
+
+  .footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+  }
+
+  .footer-column a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+
+  .footer-column a:hover {
+    border-color: #c0a062;
+  }
+
+  .footer-column strong {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-overlay h1 {
+      font-size: 2rem;
+    }
+
+    .gallery img {
+      width: 280px;
+    }
+  }
+</style>
+
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay">
+      <h1>Rolls-Royce</h1>
+      <p>Where Elegance Meets Engineering Perfection</p>
+    </div>
+  </header>
+
+  <!-- Specs Section -->
+  <section class="specs">
+    <h2>Bespoke Specifications</h2>
+    <div class="spec-grid">
+      <div class="spec-card">
+        <i class="fas fa-tachometer-alt"></i>
+        <h3>0-100 km/h</h3>
+        <p>4.8 Seconds</p>
+      </div>
+      <div class="spec-card">
+        <i class="fas fa-cogs"></i>
+        <h3>Engine</h3>
+        <p>6.75L V12 Twin-Turbo</p>
+      </div>
+      <div class="spec-card">
+        <i class="fas fa-gas-pump"></i>
+        <h3>Fuel Efficiency</h3>
+        <p>6.5 km/l</p>
+      </div>
+      <div class="spec-card">
+        <i class="fas fa-chair"></i>
+        <h3>Interior</h3>
+        <p>Hand-Stitched Leather</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <h2>Luxury in Every Angle</h2>
+    <div class="gallery">
+      <img src="https://images.pexels.com/photos/5046370/pexels-photo-5046370.jpeg" alt="Rolls Royce Front">
+      <img src="https://vimg.remora.inc/26465/sca13gz03su230545-2025-rolls-royce-ghost-dark-emerald-1.jpg"
+        alt="Rolls Royce Side">
+      <img src="https://bluesky.cdn.imgeng.in/cogstock-images/7983b8cb-d6a0-4be3-81e2-82b208cb8aff.jpg"
+        alt="Rolls Royce Rear">
+      <img
+        src="https://res.cloudinary.com/motortrak/t_base_vehicle_transformation/ims2/vehicle-media/undefined/kcoc6xxjq3z2z7seuhfx"
+        alt="Rolls Royce - silver">
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <h2>Drive the Dream</h2>
+    <p>Experience bespoke craftsmanship with the Rolls-Royce Ghost. Book your private viewing today.</p>
+    <a href="contact.html" class="btn">Book Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>NAMAKKAL</h3>
+        <p><strong>Sales &amp; Service</strong></p>
+        <p>NH 7, Salem Road,<br>
+          Survey No: 82/9A2 - 12A,<br>
+          Mudhalaipatty Village, Namakkal, Tamil Nadu,<br>
+          India - 637 001.<br>
+          Tel.: +91 9344842060<br>
+          Email: <a href="mailto:inforollsroyce-elegance.in">rollsroycenkl@gmail.com</a>
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>SALEM</h3>
+        <p><strong>Sales &amp; Service</strong></p>
+        <p>Door No. 1/582-2, Seelanayakampatti Bypass,<br>
+          Salem Post, Salem Taluk,<br>
+          Salem, Tamil Nadu,<br>
+          India - 636 309.<br>
+          Tel.: +91 6383806004<br>
+          Email: <a href="mailto:inforollsroyce-elegance.in">rollsroycesalem@gmail.com</a>
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>COIMBATORE</h3>
+        <p><strong>Sales &amp; Service</strong></p>
+        <p>Ground Floor, 377,<br>
+          Nearby New Busstand, Gandhipuram,<br>
+          Coimbatore, Tamil Nadu,<br>
+          India - 600018.<br>
+          Tel.: +91 6384681305<br>
+          Email: <a href="inforollsroyce-elegance.in">rollsroycekovai@gmail.com</a>
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>CHENNAI</h3>
+        <p><strong>Sales &amp; Service</strong></p>
+        <p>20, GST Road,<br>
+          New Busstand,<br>
+          Meenambakkam,<br>
+          Chennai, Tamil Nadu,<br>
+          India - 600027.<br>
+          Tel.: +91 9176856666<br>
+          Email: <a href="mailto:inforollsroyce-elegance.in">rollsroycechennai@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
